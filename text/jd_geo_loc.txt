@@ -76,3 +76,36 @@ curl 'https://www.justdial.com/functions/maps.php' \
 
   https://www.justdial.com/Chennai/Grocery-Stores-in-Anna-Nagar/nct-10237947
   https://www.justdial.com/Chennai/Grocery-Stores-in-Anna-Nagar/nct-10237947/page-3
+
+  curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=b&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'authority: www.justdial.com' \
+  -H 'accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'x-requested-with: XMLHttpRequest' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' \
+  -H 'x-frsc-token: 7d4c7c6d6cf60dcb36fcd456e0c451be91ef82f0236de481b3aed4d52b7bf48f' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://www.justdial.com/Chennai/Grocery-Stores-in-Anna-Nagar/nct-10237947' \
+  -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'cookie: ppc=; _ctok=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377; docidarray=%7B%22044PXX44.XX44.100814143544.H1X2%22%3A%222020-07-26%22%7D; stype=pop_desc; _ga=GA1.2.1019744469.1595769853; _fbp=fb.1.1595769856553.1167867403; TKY=7d4c7c6d6cf60dcb36fcd456e0c451be91ef82f0236de481b3aed4d52b7bf48f; main_city=Chennai; akcty=Chennai; inweb_city=Chennai; attn_user=logout; PHPSESSID=3891b9d724c2a072dbb751c16eab59ad; profbd=0; bdcheck=1; _gid=GA1.2.1882492932.1596377762; tab=toprs; prevcatid=10237947; bd_inputs=2|4|Grocery%20Stores; view=lst_v; scity=Chennai; dealBackCity=Chennai; bm_mi=BFFEF7DA0D8A0F3EC96023055D0B196E~kh1I635s/JPx3gqRdL2Gsk+wcApvlflv1YGtHLyaH3x+E1cc7FXNuV3mrmBk4EXxDXfFjnnQLmyJpKzPhXmL0p3om8J2xcbKT8gC9L/aDymoWmhnoXG5hMWq/oLfv+kU8EYexhFRBSMGgcZykBapUXItf8bVU/Gro9CygcteLaMvB2iNM3ic14sZwEUeMFDThARHhWTfbsEKiu1Rqc6EJ1VioIW6FbO5SHahowkALYoSRJIjVvFFxy33/ZgueH1N; ak_bmsc=57BC7E6E7FAFAFA35B89729152C0370817417C34B16F00009FCA265F82C7FA17~plzgye25Kk1Mz/y5GqUHKrY38FbQJvIZmilV+MT+cIk2AiHqEqAqRNG7eJpJi3b9Us1RfaCfobenK1O4GQS5UPrBsQUAzuo7Xh1zA56O6ed7hWC3SQePgaEBGyyyPqNUkyMzdB8nD/5eoBPrhk1Pd0eRGm2oBWka41yukgN/wWwFjtakaA2dAaVmV+YoygBft9W+DhcSjVWdmLl/sLZyRDNMSy4bXJjds1+mELEYlK3mO1LLg0pMhXczt44Fx5fyL7; BDprofile=1; search_area=Near Anna Nagar; sarea=; bm_sv=6A351783D3E230A9C2BAF23849776E79~y79rAfyngF5+tkVPpgyMhT4hQmqlTsm1qDDb4TjJcWET0Tjdtzc3s4jesW9MdJiShCrzBzp6x9tWVrADolP6MWPJ9+29yrLAekodCOKtclEdxRi38M4uuiSidNojkkbL+qsD+NY+meq30ngXCig5KcOn340PWPfh1vBRzT8IC8A=' \
+  --compressed
+
+  curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=b&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+    -H 'authority: www.justdial.com' \
+    -H 'accept: application/json, text/javascript, */*; q=0.01' \
+    -H 'x-requested-with: XMLHttpRequest' \
+    -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' \
+    -H 'x-frsc-token: 7d4c7c6d6cf60dcb36fcd456e0c451be91ef82f0236de481b3aed4d52b7bf48f' \
+    -H 'sec-fetch-site: same-origin' \
+    -H 'sec-fetch-mode: cors' \
+    -H 'sec-fetch-dest: empty' \
+    -H 'referer: https://www.justdial.com/Chennai/Grocery-Stores-in-Anna-Nagar/nct-10237947' \
+    -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+    --compressed
+
+https://www.justdial.com/Chennai/Grocery-Stores-in-Badri-Garden-Periyamet/nct-10237947
+Badri Garden-Periyamet
+
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=c&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77'
