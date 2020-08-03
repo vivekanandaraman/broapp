@@ -11,3 +11,15 @@ ReviewId
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947'
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-50' \
   -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36'
+
+//push to remote repo
+git pull origin master
+
+// stage changes
+git add .
+
+//commit changes to local repo
+git commit -m 'comment'
+
+//commit changes to remote repo - github
+git push -u origin master

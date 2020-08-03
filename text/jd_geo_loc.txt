@@ -117,10 +117,18 @@ curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai
 curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
   -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | jq .
 
-curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | jq '.results [] .text' > resp.txt
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=Z&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | jq '.results [] .text' > respz.txt
 
 // jq filters - add jq ''
 [.results]
 [][.results] |]
 jq '.results [] .text' //array of strings
+
+C:/Users/264166/go/src/github.com/vivekanandaraman/broapp
+
+// copied from windows chrome
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=f&s=1&source=10&userid=03bd61731963a24ba6253e3b3e683fea18a6462f6be9fed01a861e78fd428b89' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+
+
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=d&s=1&source=10&userid=03bd61731963a24ba6253e3b3e683fea18a6462f6be9fed01a861e78fd428b89' -H 'authority: www.justdial.com' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'sec-fetch-dest: empty' -H 'x-requested-with: XMLHttpRequest' -H 'x-frsc-token: 244e6dc7485503947a9c4c84fd394341b53e7d42291fef18fb74735fc662e578' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36' -H 'sec-fetch-site: same-origin' -H 'sec-fetch-mode: cors' -H 'referer: https://www.justdial.com/Chennai/Grocery-Stores/nct-10237947' -H 'accept-language: en-US,en;q=0.9' -H 'cookie: ppc=; TKY=244e6dc7485503947a9c4c84fd394341b53e7d42291fef18fb74735fc662e578; _ctok=03bd61731963a24ba6253e3b3e683fea18a6462f6be9fed01a861e78fd428b89; attn_user=logout; bm_mi=27ED94546C4ADC7CF5D47C413593C4A7~xbGKzzYEM+3nTnSUIoqL/L6EtJz/9VNpsHc2Sk9+uIgUIOju1dEdrRw7y7AgOsf8YjAgMKbEux+Y3BL0dC6uFNaqrRaQRIs+7W8/TRw2WvMb8+V7XcKYXkDoSFmjIToT4ZwDom4dwhhJ5X6x8TZxO37HSlRwcJdjAsIDJqUN2fl9kG8ApO5K5PPgLG59sp4agUsOfmUXeU17hSr6vVUhb4JZrRrsez4DNJcMPaTkRpXfELIv+t4xgWlpj6tNQOxJTe78mlJbz2Dv5lUu/Lo9/w==; _ga=GA1.2.950415007.1596467954; _gid=GA1.2.927329222.1596467954; _gat=1; _gat_UA-31027791-3=1; scity=Chennai; usrcity=Chennai; dealBackCity=Chennai; inweb_city=Chennai; ak_bmsc=292AB35926A447C5770ECE0F54D0A005170BD73DCF440000EC2A285F4CC02B7F~plpUC8jGBJ5miNHO3WihElLacck/LIKk00VIqDl9j8me/CCPMEPkpqVEiuJyhd5yzvbFTCZzh+G2qKgWv2BQ7TIKihZkICbwTyUuD9o0xFBH8yfvw6MPU/QPSGMGAzLN03mJXn7oLM7QwXVoTapSr0i5gAX932Ox68v5SVYwKhOJEqWPagel6pLgIJdMInMZvffnRDCz48b0WE5bfI24QelquDWHg9f4kdD1CNlnHkAxSPD+YZbo1nsSMJGcZUI38w; _fbp=fb.1.1596467954583.907029579; main_city=Chennai; akcty=Chennai; inweb_what=Grocery+Stores; ppc=; PHPSESSID=e94860ed6839438e9b86f491fa5065a8; profbd=0; bdcheck=1; _gat_category=1; tab=toprs; BDprofile=0; prevcatid=10237947; bd_inputs=2|4|Grocery%20Stores; view=lst_v; bm_sv=CC6DAC873C83445B2D9C0C946DF76A9B~3TQoBPXIxr5y5RRLBI6yWd7KAIeZ94HAeG/OJlfKU+OzYB36VsuM3y4LpgvTsmYnVbi1OkI2nniRgXU9jPgEN0/e9DtX6VpSuDFd9gQ8+j4u7ykndIhbKyP2ZxAX1NiI0M+kZRSIbY0Tz8pWlLY6tZXmGJFlKq8Np8sxR1wrTBs=; sarea=' --compressed
