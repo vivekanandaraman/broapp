@@ -107,5 +107,20 @@ curl 'https://www.justdial.com/functions/maps.php' \
 https://www.justdial.com/Chennai/Grocery-Stores-in-Badri-Garden-Periyamet/nct-10237947
 Badri Garden-Periyamet
 
-curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=c&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+//Request to get locality
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
   -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77'
+
+  curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+    -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | xmllint --format -
+
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | jq .
+
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | jq '.results [] .text' > resp.txt
+
+// jq filters - add jq ''
+[.results]
+[][.results] |]
+jq '.results [] .text' //array of strings
