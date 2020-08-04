@@ -12,7 +12,7 @@ curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947'
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-50' \
   -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36'
 
-//push to remote repo
+//pull from remote repo
 git pull origin master
 
 // stage changes
@@ -23,3 +23,6 @@ git commit -m 'comment'
 
 //commit changes to remote repo - github
 git push -u origin master
+
+CREATE TABLE Sites AS SELECT (SiteTemplate1 || replace(Locality.Name,' ','-') || SiteTemplate2 || Page.PageNumber) AS text 
+FROM SiteTemplate, Locality, Page;
