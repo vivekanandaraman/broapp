@@ -1,7 +1,9 @@
 BusinessName
 Address
 AddressLocality
+City
 Pincode
+State
 GeoLocation
 Tag - Grocery Store
 Mobile
@@ -15,7 +17,9 @@ ReviewId
 // Request to pull store info
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947'
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-50' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36'
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' | pup 'script[type="application/ld+json"]'
+
+//th[scope="row"]
 
 // Request to pull locality info
   curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=U&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
