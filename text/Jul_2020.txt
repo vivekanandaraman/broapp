@@ -1,12 +1,16 @@
 BusinessName
 Address
+AddressLocality
+Pincode
 GeoLocation
-Tag
+Tag - Grocery Store
 Mobile
 BusinessID
 StartDate
 EndDate
 ReviewId
+
+
 
 // Request to pull store info
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947'
