@@ -17,7 +17,19 @@ ReviewId
 // Request to pull store info
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947'
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-50' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' | pup 'script[type="application/ld+json"]'
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' | pup 'script[type="application/ld+json"]' json{} | jq .
+
+//pup command to fetch the 2nd element occurence
+pup 'script[type="application/ld+json"]:nth-of-type(2)' text{}
+
+//xmllint to pull store information
+curl -sL 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-50' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' | xmllint --xpath "//script[@type='application/ld+json']"
+
+//xmllint command to get lang attribute, title element
+//title[@lang='en'] --- xmllint
+//sed command to get total # of lines
+//sed -n '$='
 
 //th[scope="row"]
 
