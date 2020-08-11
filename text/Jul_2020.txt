@@ -17,10 +17,18 @@ ReviewId
 // Request to pull store info
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947'
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-50' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' | pup 'script[type="application/ld+json"]' json{} | jq .
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' | pup 'script[type="application/ld+json"]:nth-of-type(4)' text{} | jq '.[] | select(.name != "justdial.com") | [.name, .address.streetAddress, .address.addresslocality, .address.postalCode, .address.addressCountry, .image]'
 
 //pup command to fetch the 2nd element occurence
-pup 'script[type="application/ld+json"]:nth-of-type(2)' text{}
+pup 'script[type="application/ld+json"]:nth-of-type(2)' text{} | jq '.[] .name'
+
+//pup command to fetch the 4nd element occurrence - address info
+pup 'script[type="application/ld+json"]:nth-of-type(4)' text{} | jq '.[] | select(.name != "justdial.com") | [.name, .address.streetAddress, .address.addresslocality, .address.postalCode, .address.addressCountry, .image]'
+
+//pup command to fetch the 3nd element occurrence - url info
+pup 'script[type="application/ld+json"]:nth-of-type(4)' text{} | jq '. | .itemListElement [] .url'
+
+	jq '.[] | select(.id == "second")'
 
 //xmllint to pull store information
 curl -sL 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-50' \
