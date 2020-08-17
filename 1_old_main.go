@@ -6,7 +6,6 @@ import (
         "log"
         "net/http"
 				"github.com/PuerkitoBio/goquery"
-        "encoding/json"
 //				"github.com/gocolly/colly"
 )
 
@@ -26,6 +25,12 @@ func main() {
         }
 
         defer resp.Body.Close()
+        // body, err := ioutil.ReadAll(resp.Body)
+        // if err != nil {
+        //         log.Fatalln(err)
+        // }
+				//
+        // log.Println(string(body))
 
 				// Load the HTML document
 				doc, err := goquery.NewDocumentFromReader(resp.Body)
@@ -34,24 +39,12 @@ func main() {
 				}
 
 				// Find the address items
-				jsonData := doc.Find("script[type='application/ld+json']").Eq(3).Text()
-				fmt.Println(jsonData)
-
-        // parse jsonData
-        var list1 []map[string]interface{}
-        if err := json.Unmarshal([]byte(jsonData), &list1); err != nil {
-            panic(err)
-        }
-        for i := range list1 {
-          fmt.Println(list1[i])
-          for k,v := range list1[i] {
-            switch v := v.(type) {
-              case string:
-                fmt.Println(k, v, "(string)")
-              case float64:
-                fmt.Println(k, v, "(float64)")
-            }
-          }
-        }
-
+				txt1 := doc.Find("script[type='application/ld+json']").Eq(3).Text()
+        //doc.Find("script[type=application/ld+json']").Each(func(i int, s *goquery.Selection) {
+					// For each item found, get the band and title
+         	//txt1 := s.Find().Eq(i).Text()
+				//	title := s.Find("i").Text()
+				//fmt.Printf("Type of selector = %T",txt1)
+				fmt.Println(txt1)
+				//})
 }
