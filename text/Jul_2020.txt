@@ -16,9 +16,14 @@ ReviewId
 
 // Request to pull store info
 curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947'
-curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-50' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' | pup 'script[type="application/ld+json"]:nth-of-type(4)' text{} | jq '.[] | select(.name != "justdial.com") | [.name, .address.streetAddress, .address.addresslocality, .address.postalCode, .address.addressCountry, .image]'
-
+curl 'https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' | pup 'script[type="application/ld+json"]:nth-of-type(4)' text{} | jq '.[] | select(.name != "justdial.com") | [.name, .address.streetAddress, .address.addresslocality, .address.postalCode, .address.addressCountry, .image]' | tr '\133\012\135' '  \n'
+//https://www.sohamkamani.com/blog/2017/10/18/parsing-json-in-golang/
+// ascii octal value
+//5b 133 [
+//oa 012
+//5d 135 ]
+//tr '\133\012\135' '  \n'
 //pup command to fetch the 2nd element occurrence
 pup 'script[type="application/ld+json"]:nth-of-type(2)' text{} | jq '.[] .name'
 
