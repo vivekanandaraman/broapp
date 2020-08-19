@@ -1,0 +1,138 @@
+curl 'https://www.justdial.com/functions/maps.php' \
+  -H 'authority: www.justdial.com' \
+  -H 'accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'x-requested-with: XMLHttpRequest' \
+  -H 'x-frsc-token: 6d0092fe91510c9d94b23c7af9463fc08376b80ca8fc620e9fc6442092d1e0c3' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' \
+  -H 'content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+  -H 'origin: https://www.justdial.com' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://www.justdial.com/Chennai/Nilgiris-Supermarket-Opp-To-Airtel-Store-Selaiyur/044PXX44-XX44-160311181521-F2S7_BZDET' \
+  -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'cookie: ppc=; _ctok=028d853c31f14243fdb011cc4cfe289bb5a2d927c4fcd94f9ee2dfdac8e007d4; inweb_city=Chennai; _ga=GA1.2.960545994.1594614805; _fbp=fb.1.1594614811457.1259366897; _gid=GA1.2.1391903366.1595660078; stype=pop_desc; docidarray=%7B%22044PXX44.XX44.160311181521.F2S7%22%3A%222020-07-26%22%2C%22044PXX44.XX44.100814143544.H1X2%22%3A%222020-07-26%22%7D; TKY=6d0092fe91510c9d94b23c7af9463fc08376b80ca8fc620e9fc6442092d1e0c3; main_city=Chennai; akcty=Chennai; attn_user=logout; PHPSESSID=4q8tg3frgp9jlka4i6bqtp7l13; profbd=0; bdcheck=1; ak_bmsc=95071221947599DEDDFEB246D65E1DB6170BD7069A6C0000F09B1D5FF1340818~plqPlkSHKzL+7oDduqlC/DCEdsIbUzSiRQkQpUYLHxenF+KG7wgmjJTbwJ+X0ekx4UZyMBUOe86DGEekc3WGqv99OISXX//HgBhUIZpd7MBf8GiVPu9nokw4lyHlKXdcoMU/+9Vhhf0P5KzrsQvbmSeR0U2ghGQ92F+1u+DJlomcvNQL3h8wovrOSrj0fg7XM/tgDNHume1MkqLYWLU61WYAjERWkfST1AmINpRPSsdbGSq3nDOWWKaO/hd//H3Ind; prevcatid=10237947; bd_inputs=2|4|Grocery%20Stores; view=lst_v; scity=Chennai; dealBackCity=Chennai; sarea=Selaiyur; BDprofile=1; tab=distance5; catid=10237947; alter=; ppc=; detailmodule=044PXX44.XX44.160311181521.F2S7; _gat=1; _gat_UA-31027791-3=1; bm_sv=7DBB2B6E9D4C395788C4ACAB2EA1327E~jnJD+a4CmFejYLEd1OcxeHkSKeJULh5jDbGKF06YXt2hgxytyBnrcIQqUOHfw5kPSo2Okjr22TDJSZXWC+MylcDs7wyvvAbeivjJK+8ALrHClVFd2qW3HIyj/MZ9IKDWEzw822njw5g+8gQiRHhm6QIh89tKutp/+o9ew+/lTso=' \
+  --data-raw 'doc=044PXX44.XX44.160311181521.F2S7' \
+
+
+{"lil":"12.922617","lon":"80.141189"}
+curl 'https://www.justdial.com/functions/maps.php' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' \
+  -H 'referer: https://www.justdial.com/Chennai/Nilgiris-Supermarket-Opp-To-Airtel-Store-Selaiyur/044PXX44-XX44-160311181521-F2S7_BZDET' \
+  --data-raw 'doc=044PXX44.XX44.160311181521.F2S7'
+
+{"lil":"12.919598","lon":"80.1447211"}
+curl 'https://www.justdial.com/functions/maps.php' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' \
+  -H 'referer: https://www.justdial.com/Chennai/Rajendran-Supermarket-Near-Parasakthi-Nagar-Selaiyur/044PXX44-XX44-100814143544-H1X2_BZDET' \
+  --data-raw 'doc=044PXX44.XX44.100814143544.H1X2'
+
+{"lil":"12.924167","lon":"80.1475"}
+curl 'https://www.justdial.com/functions/maps.php' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' \
+  -H 'referer: https://www.justdial.com/Chennai/Thangam-Supermarket-Post-Office-Mahalakshmi-Nagar-selaiyur/044PXX44-XX44-140228064502-B6B9_BZDET' \
+  --data-raw 'doc=044PXX44.XX44.140228064502.B6B9'
+
+{"lil":"13.093178160489","lon":"80.196761833504"}
+curl 'https://www.justdial.com/functions/maps.php' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' \
+  -H 'referer: https://www.justdial.com/Chennai/Pasumai-Natural-Agro-Products-Opposite-to-Kovai-Pazhamudir-Near-Thirumangalam-Police-Station-Anna-Nagar-West/044PXX44-XX44-191029131701-S9V5_BZDET' \
+  --data-raw 'doc=044PXX44.XX44.191029131701.S9V5'
+
+  <script type="application/ld+json">
+  		{
+  		"@context": "http://schema.org",
+      	"@type": "ItemList",
+      	"itemListElement" : [{"@type":"ListItem","position":1,"url":"https:\/\/www.justdial.com\/Chennai\/Nilgiris-Supermarket-Opp-To-Airtel-Store-Selaiyur\/044PXX44-XX44-160311181521-F2S7_BZDET"},{"@type":"ListItem","position":2,"url":"https:\/\/www.justdial.com\/Chennai\/Rajendran-Supermarket-Near-Parasakthi-Nagar-Selaiyur\/044PXX44-XX44-100814143544-H1X2_BZDET"},{"@type":"ListItem","position":3,"url":"https:\/\/www.justdial.com\/Chennai\/Thangam-Supermarket-Post-Office-Mahalakshmi-Nagar-selaiyur\/044PXX44-XX44-140228064502-B6B9_BZDET"},{"@type":"ListItem","position":4,"url":"https:\/\/www.justdial.com\/Chennai\/Venkateswara-Store-Near-kamarajapuram-Selaiyur\/044PXX44-XX44-160810164043-Z8D7_BZDET"},{"@type":"ListItem","position":5,"url":"https:\/\/www.justdial.com\/Chennai\/S-R-S-Traders-Near-Sivan-Temple-Selaiyur\/044PXX44-XX44-190214072025-R4A5_BZDET"},{"@type":"ListItem","position":6,"url":"https:\/\/www.justdial.com\/Chennai\/Alagar-Supermarket-Parashakti-Nagar-Chellai-Nagar-Selaiyur\/044PXX44-XX44-200519200020-L6C4_BZDET"},{"@type":"ListItem","position":7,"url":"https:\/\/www.justdial.com\/Chennai\/Keerthi-Stores-Bharathi-Park-Selaiyur\/044PXX44-XX44-180830210155-W2R3_BZDET"},{"@type":"ListItem","position":8,"url":"https:\/\/www.justdial.com\/Chennai\/Thanjai-Kumaran-Oil-Store-Selaiyur\/044PXX44-XX44-100819174248-V9L5_BZDET"},{"@type":"ListItem","position":9,"url":"https:\/\/www.justdial.com\/Chennai\/Sanson-Stores-Selaiyur\/044PXX44-XX44-100818134757-K8N7_BZDET"},{"@type":"ListItem","position":10,"url":"https:\/\/www.justdial.com\/Chennai\/Cash-Carry-Nataraj-Nagar-Near-Zion-Mric-School-Selaiyur\/044PXX44-XX44-110125180317-K1Z3_BZDET"}]    	}
+  </script>
+
+  curl 'https://www.justdial.com/functions/ajxsearch.php?national_search=0&act=pagination_new&city=Chennai&search=Grocery%20Stores&where=Selaiyur&catid=0&psearch=&prid=&page=6&SID=&mntypgrp=0&toknbkt=&bookDate=&jdsrc=&median_latitude=12.916941000000&median_longitude=80.139034000000&ncatid=10237947&mncatname=Grocery%20Stores&dcity=Chennai&pncode=600073&htlis=0' \
+    -H 'authority: www.justdial.com' \
+    -H 'accept: application/json, text/javascript, */*; q=0.01' \
+    -H 'x-requested-with: XMLHttpRequest' \
+    -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' \
+    -H 'x-frsc-token: 6d0092fe91510c9d94b23c7af9463fc08376b80ca8fc620e9fc6442092d1e0c3' \
+    -H 'sec-fetch-site: same-origin' \
+    -H 'sec-fetch-mode: cors' \
+    -H 'sec-fetch-dest: empty' \
+    -H 'referer: https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947' \
+    -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+    -H 'cookie: ppc=; _ctok=028d853c31f14243fdb011cc4cfe289bb5a2d927c4fcd94f9ee2dfdac8e007d4; inweb_city=Chennai; _ga=GA1.2.960545994.1594614805; _fbp=fb.1.1594614811457.1259366897; _gid=GA1.2.1391903366.1595660078; stype=pop_desc; TKY=6d0092fe91510c9d94b23c7af9463fc08376b80ca8fc620e9fc6442092d1e0c3; main_city=Chennai; akcty=Chennai; attn_user=logout; PHPSESSID=4q8tg3frgp9jlka4i6bqtp7l13; profbd=0; bdcheck=1; ak_bmsc=95071221947599DEDDFEB246D65E1DB6170BD7069A6C0000F09B1D5FF1340818~plqPlkSHKzL+7oDduqlC/DCEdsIbUzSiRQkQpUYLHxenF+KG7wgmjJTbwJ+X0ekx4UZyMBUOe86DGEekc3WGqv99OISXX//HgBhUIZpd7MBf8GiVPu9nokw4lyHlKXdcoMU/+9Vhhf0P5KzrsQvbmSeR0U2ghGQ92F+1u+DJlomcvNQL3h8wovrOSrj0fg7XM/tgDNHume1MkqLYWLU61WYAjERWkfST1AmINpRPSsdbGSq3nDOWWKaO/hd//H3Ind; prevcatid=10237947; bd_inputs=2|4|Grocery%20Stores; view=lst_v; scity=Chennai; dealBackCity=Chennai; sarea=Selaiyur; BDprofile=1; tab=distance5; catid=10237947; alter=; ppc=; usrcity=Chennai; detailmodule=044PXX44.XX44.140228064502.B6B9; docidarray=%7B%22044PXX44.XX44.160311181521.F2S7%22%3A%222020-07-26%22%2C%22044PXX44.XX44.100814143544.H1X2%22%3A%222020-07-26%22%2C%22044PXX44.XX44.140228064502.B6B9%22%3A%222020-07-26%22%7D; _gat=1; _gat_category=1; _gat_UA-31027791-3=1; bm_sv=7DBB2B6E9D4C395788C4ACAB2EA1327E~jnJD+a4CmFejYLEd1OcxeHkSKeJULh5jDbGKF06YXt2hgxytyBnrcIQqUOHfw5kPSo2Okjr22TDJSZXWC+MylcDs7wyvvAbeivjJK+8ALrF5j2C4uByTnR8EMlzll17qadf6dB7gXUxgZzEqe2q7mJN3HiLnhS1ahppqd4Bli3I=' \
+    --compressed
+
+    curl 'https://www.justdial.com/webmain/ajxmain.php?docids=044PXX44.XX44.100819182724.Z4A4%24%24%24%24%24%240%24%241%24%240%2C044PXX44.XX44.200515215434.T4A5%24%240%24%24chennai%24%240%24%241%24%240%2C044PXX44.XX44.160130175053.C1X9%24%240%24%24Chennai%24%240%24%241%24%240%2C044PXX44.XX44.160316110950.F1C6%24%240%24%24chennai%24%240%24%241%24%240%2C044PJE00317%24%240%24%24Chennai%24%240%24%241%24%240%2C044PXX44.XX44.160323131843.U7M6%24%240%24%24Chennai%24%240%24%241%24%240%2C044PXX44.XX44.160107111357.J2G9%24%240%24%24Chennai%24%240%24%241%24%240%2C044PXX44.XX44.160517175017.E8G9%24%240%24%24Chennai%24%240%24%241%24%240%2C044PXX44.XX44.180926201506.Q3T9%24%240%24%24chennai%24%240%24%240%24%240%2C044PXX44.XX44.140920221509.Q9V7%24%240%24%24Chennai%24%240%24%241%24%240&cases=srchfratings&city=Chennai' \
+  -H 'authority: www.justdial.com' \
+  -H 'accept: */*' \
+  -H 'x-requested-with: XMLHttpRequest' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36' \
+  -H 'x-frsc-token: 6d0092fe91510c9d94b23c7af9463fc08376b80ca8fc620e9fc6442092d1e0c3' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947' \
+  -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'cookie: ppc=; _ctok=028d853c31f14243fdb011cc4cfe289bb5a2d927c4fcd94f9ee2dfdac8e007d4; inweb_city=Chennai; _ga=GA1.2.960545994.1594614805; _fbp=fb.1.1594614811457.1259366897; _gid=GA1.2.1391903366.1595660078; stype=pop_desc; TKY=6d0092fe91510c9d94b23c7af9463fc08376b80ca8fc620e9fc6442092d1e0c3; main_city=Chennai; akcty=Chennai; attn_user=logout; PHPSESSID=4q8tg3frgp9jlka4i6bqtp7l13; profbd=0; bdcheck=1; ak_bmsc=95071221947599DEDDFEB246D65E1DB6170BD7069A6C0000F09B1D5FF1340818~plqPlkSHKzL+7oDduqlC/DCEdsIbUzSiRQkQpUYLHxenF+KG7wgmjJTbwJ+X0ekx4UZyMBUOe86DGEekc3WGqv99OISXX//HgBhUIZpd7MBf8GiVPu9nokw4lyHlKXdcoMU/+9Vhhf0P5KzrsQvbmSeR0U2ghGQ92F+1u+DJlomcvNQL3h8wovrOSrj0fg7XM/tgDNHume1MkqLYWLU61WYAjERWkfST1AmINpRPSsdbGSq3nDOWWKaO/hd//H3Ind; prevcatid=10237947; bd_inputs=2|4|Grocery%20Stores; view=lst_v; scity=Chennai; dealBackCity=Chennai; sarea=Selaiyur; BDprofile=1; tab=distance5; catid=10237947; alter=; ppc=; usrcity=Chennai; detailmodule=044PXX44.XX44.140228064502.B6B9; docidarray=%7B%22044PXX44.XX44.160311181521.F2S7%22%3A%222020-07-26%22%2C%22044PXX44.XX44.100814143544.H1X2%22%3A%222020-07-26%22%2C%22044PXX44.XX44.140228064502.B6B9%22%3A%222020-07-26%22%7D; _gat=1; _gat_category=1; _gat_UA-31027791-3=1; bm_sv=7DBB2B6E9D4C395788C4ACAB2EA1327E~jnJD+a4CmFejYLEd1OcxeHkSKeJULh5jDbGKF06YXt2hgxytyBnrcIQqUOHfw5kPSo2Okjr22TDJSZXWC+MylcDs7wyvvAbeivjJK+8ALrHSYFEMcHgHOrHLnXV4Njt53UIyWbSg59vhW52O1koNlfSooxD0/gIJleTVfr4+ZN4=' \
+  --compressed
+
+  https://www.justdial.com/Chennai/Grocery-Stores-in-Anna-Nagar/nct-10237947
+  https://www.justdial.com/Chennai/Grocery-Stores-in-Anna-Nagar/nct-10237947/page-3
+
+  curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=b&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'authority: www.justdial.com' \
+  -H 'accept: application/json, text/javascript, */*; q=0.01' \
+  -H 'x-requested-with: XMLHttpRequest' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' \
+  -H 'x-frsc-token: 7d4c7c6d6cf60dcb36fcd456e0c451be91ef82f0236de481b3aed4d52b7bf48f' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://www.justdial.com/Chennai/Grocery-Stores-in-Anna-Nagar/nct-10237947' \
+  -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+  -H 'cookie: ppc=; _ctok=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377; docidarray=%7B%22044PXX44.XX44.100814143544.H1X2%22%3A%222020-07-26%22%7D; stype=pop_desc; _ga=GA1.2.1019744469.1595769853; _fbp=fb.1.1595769856553.1167867403; TKY=7d4c7c6d6cf60dcb36fcd456e0c451be91ef82f0236de481b3aed4d52b7bf48f; main_city=Chennai; akcty=Chennai; inweb_city=Chennai; attn_user=logout; PHPSESSID=3891b9d724c2a072dbb751c16eab59ad; profbd=0; bdcheck=1; _gid=GA1.2.1882492932.1596377762; tab=toprs; prevcatid=10237947; bd_inputs=2|4|Grocery%20Stores; view=lst_v; scity=Chennai; dealBackCity=Chennai; bm_mi=BFFEF7DA0D8A0F3EC96023055D0B196E~kh1I635s/JPx3gqRdL2Gsk+wcApvlflv1YGtHLyaH3x+E1cc7FXNuV3mrmBk4EXxDXfFjnnQLmyJpKzPhXmL0p3om8J2xcbKT8gC9L/aDymoWmhnoXG5hMWq/oLfv+kU8EYexhFRBSMGgcZykBapUXItf8bVU/Gro9CygcteLaMvB2iNM3ic14sZwEUeMFDThARHhWTfbsEKiu1Rqc6EJ1VioIW6FbO5SHahowkALYoSRJIjVvFFxy33/ZgueH1N; ak_bmsc=57BC7E6E7FAFAFA35B89729152C0370817417C34B16F00009FCA265F82C7FA17~plzgye25Kk1Mz/y5GqUHKrY38FbQJvIZmilV+MT+cIk2AiHqEqAqRNG7eJpJi3b9Us1RfaCfobenK1O4GQS5UPrBsQUAzuo7Xh1zA56O6ed7hWC3SQePgaEBGyyyPqNUkyMzdB8nD/5eoBPrhk1Pd0eRGm2oBWka41yukgN/wWwFjtakaA2dAaVmV+YoygBft9W+DhcSjVWdmLl/sLZyRDNMSy4bXJjds1+mELEYlK3mO1LLg0pMhXczt44Fx5fyL7; BDprofile=1; search_area=Near Anna Nagar; sarea=; bm_sv=6A351783D3E230A9C2BAF23849776E79~y79rAfyngF5+tkVPpgyMhT4hQmqlTsm1qDDb4TjJcWET0Tjdtzc3s4jesW9MdJiShCrzBzp6x9tWVrADolP6MWPJ9+29yrLAekodCOKtclEdxRi38M4uuiSidNojkkbL+qsD+NY+meq30ngXCig5KcOn340PWPfh1vBRzT8IC8A=' \
+  --compressed
+
+  curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=b&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+    -H 'authority: www.justdial.com' \
+    -H 'accept: application/json, text/javascript, */*; q=0.01' \
+    -H 'x-requested-with: XMLHttpRequest' \
+    -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' \
+    -H 'x-frsc-token: 7d4c7c6d6cf60dcb36fcd456e0c451be91ef82f0236de481b3aed4d52b7bf48f' \
+    -H 'sec-fetch-site: same-origin' \
+    -H 'sec-fetch-mode: cors' \
+    -H 'sec-fetch-dest: empty' \
+    -H 'referer: https://www.justdial.com/Chennai/Grocery-Stores-in-Anna-Nagar/nct-10237947' \
+    -H 'accept-language: en-GB,en-US;q=0.9,en;q=0.8' \
+    --compressed
+
+https://www.justdial.com/Chennai/Grocery-Stores-in-Badri-Garden-Periyamet/nct-10237947
+Badri Garden-Periyamet
+
+//Request to get locality
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77'
+
+  curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+    -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | xmllint --format -
+
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=a&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | jq .
+
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=U&s=1&source=10&userid=1040cad1a3b907b4378be0f01684c4f01f022b7df7df420afbfbd063be427377' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.77' | jq '.results [] .text' > respu.txt
+
+// jq filters - add jq ''
+[.results]
+[][.results] |]
+jq '.results [] .text' //array of strings
+
+C:/Users/264166/go/src/github.com/vivekanandaraman/broapp
+
+// copied from windows chrome
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=f&s=1&source=10&userid=03bd61731963a24ba6253e3b3e683fea18a6462f6be9fed01a861e78fd428b89' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'
+
+
+curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai&search=d&s=1&source=10&userid=03bd61731963a24ba6253e3b3e683fea18a6462f6be9fed01a861e78fd428b89' -H 'authority: www.justdial.com' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'sec-fetch-dest: empty' -H 'x-requested-with: XMLHttpRequest' -H 'x-frsc-token: 244e6dc7485503947a9c4c84fd394341b53e7d42291fef18fb74735fc662e578' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36' -H 'sec-fetch-site: same-origin' -H 'sec-fetch-mode: cors' -H 'referer: https://www.justdial.com/Chennai/Grocery-Stores/nct-10237947' -H 'accept-language: en-US,en;q=0.9' -H 'cookie: ppc=; TKY=244e6dc7485503947a9c4c84fd394341b53e7d42291fef18fb74735fc662e578; _ctok=03bd61731963a24ba6253e3b3e683fea18a6462f6be9fed01a861e78fd428b89; attn_user=logout; bm_mi=27ED94546C4ADC7CF5D47C413593C4A7~xbGKzzYEM+3nTnSUIoqL/L6EtJz/9VNpsHc2Sk9+uIgUIOju1dEdrRw7y7AgOsf8YjAgMKbEux+Y3BL0dC6uFNaqrRaQRIs+7W8/TRw2WvMb8+V7XcKYXkDoSFmjIToT4ZwDom4dwhhJ5X6x8TZxO37HSlRwcJdjAsIDJqUN2fl9kG8ApO5K5PPgLG59sp4agUsOfmUXeU17hSr6vVUhb4JZrRrsez4DNJcMPaTkRpXfELIv+t4xgWlpj6tNQOxJTe78mlJbz2Dv5lUu/Lo9/w==; _ga=GA1.2.950415007.1596467954; _gid=GA1.2.927329222.1596467954; _gat=1; _gat_UA-31027791-3=1; scity=Chennai; usrcity=Chennai; dealBackCity=Chennai; inweb_city=Chennai; ak_bmsc=292AB35926A447C5770ECE0F54D0A005170BD73DCF440000EC2A285F4CC02B7F~plpUC8jGBJ5miNHO3WihElLacck/LIKk00VIqDl9j8me/CCPMEPkpqVEiuJyhd5yzvbFTCZzh+G2qKgWv2BQ7TIKihZkICbwTyUuD9o0xFBH8yfvw6MPU/QPSGMGAzLN03mJXn7oLM7QwXVoTapSr0i5gAX932Ox68v5SVYwKhOJEqWPagel6pLgIJdMInMZvffnRDCz48b0WE5bfI24QelquDWHg9f4kdD1CNlnHkAxSPD+YZbo1nsSMJGcZUI38w; _fbp=fb.1.1596467954583.907029579; main_city=Chennai; akcty=Chennai; inweb_what=Grocery+Stores; ppc=; PHPSESSID=e94860ed6839438e9b86f491fa5065a8; profbd=0; bdcheck=1; _gat_category=1; tab=toprs; BDprofile=0; prevcatid=10237947; bd_inputs=2|4|Grocery%20Stores; view=lst_v; bm_sv=CC6DAC873C83445B2D9C0C946DF76A9B~3TQoBPXIxr5y5RRLBI6yWd7KAIeZ94HAeG/OJlfKU+OzYB36VsuM3y4LpgvTsmYnVbi1OkI2nniRgXU9jPgEN0/e9DtX6VpSuDFd9gQ8+j4u7ykndIhbKyP2ZxAX1NiI0M+kZRSIbY0Tz8pWlLY6tZXmGJFlKq8Np8sxR1wrTBs=; sarea=' --compressed
+
+
+dc fe ji yz hg ba ts ts ba ts vu vu rq ji acb rq ts
++  (  9  1  )  -  4  4  -   4  4  3  5  9  0   5  4
