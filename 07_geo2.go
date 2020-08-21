@@ -49,7 +49,7 @@ func main() {
 
 				// Find the url items
 				jsonData := doc.Find("script[type='application/ld+json']").Eq(2).Text()
-				//fmt.Println(jsonData)
+				fmt.Println(jsonData)
 
         //var str1 string
         //url
@@ -67,6 +67,25 @@ func main() {
 					//fmt.Println(url)
 					value := gjson.Get(jsonData, url)
           //fmt.Println(value.Str)
+
+					//Request to get GeoLocation
+					client := &http.Client{}
+	        req, err := http.NewRequest("GET", value.Str, nil)
+	        if err != nil {
+	                fmt.Println(err)
+	        }
+
+	        req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36")
+
+					req.Header.Add("referer", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36")
+
+	        resp, err := client.Do(req)
+	        if err != nil {
+	                fmt.Println(err)
+	        }
+
+	        defer resp.Body.Close()
+
 
 					//write to file
 					fmt.Fprintln(f, value.Str)

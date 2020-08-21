@@ -70,4 +70,28 @@ git push -u origin master
 CREATE TABLE Sites AS SELECT (SiteTemplate1 || replace(Locality.Name,' ','-') || SiteTemplate2 || Page.PageNumber) AS text
 FROM SiteTemplate, Locality, Page;
 
-select * from 
+select
+BusinessName,
+Address,
+Locality,
+Pincode,
+Country,
+Url
+ from
+(
+select
+BusinessName,
+Address,
+Locality,
+Pincode,
+Country,
+Image,
+replace(upper(substr(Image,instr(Image,'044pxx44'),31)),'.','-') url1
+from Customer1) as c,
+(
+select
+Url,
+substr(Url,-37,31) url1
+from Geo1) as g
+where c.url1 = g.url1
+;
