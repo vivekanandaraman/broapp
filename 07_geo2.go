@@ -11,7 +11,7 @@
 package main
 
 import (
-				//"os"
+				"os"
 				//"buffer"
 				"fmt"
         "strconv"
@@ -50,7 +50,14 @@ func main() {
 
 				// Find the url items
 				jsonData := doc.Find("script[type='application/ld+json']").Eq(2).Text()
-				fmt.Println(jsonData)
+				//fmt.Println(jsonData)
+
+				//create file if not already exists
+				f, err := os.OpenFile("GeoLocation1.txt",
+					os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+				if err != nil {
+					fmt.Println(err)
+				}
 
         //var str1 string
         //url
@@ -70,7 +77,7 @@ func main() {
 
 					fmt.Println(postdata)
 
-					//Request to get GeoLocation
+					//Request to POST and get GeoLocation
 					client := &http.Client{}
 	        req, err := http.NewRequest("POST", "https://www.justdial.com/functions/maps.php", strings.NewReader(postdata))
 	        if err != nil {
@@ -78,6 +85,8 @@ func main() {
 	        }
 
 	        req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36")
+
+					req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 
 					req.Header.Add("Referer", value.Str)
 
@@ -94,6 +103,20 @@ func main() {
 	        defer resp.Body.Close()
 
 					Geojsons := string(Geojsoni)
-					fmt.Printf(Geojsons)
+					Geojson := gjson.GetMany(Geojsons, "lil", "lon")
+
+					var str1 string =""
+					for _,v := range Geojson {str1 = str1 + `"` + v.Str + `",`}
+					str1 += `"` + value.Str + `"`
+
+					//fmt.Println(str1)
+					fmt.Fprintln(f, str1)
+					if err != nil {
+						fmt.Println(err)
+					}
 				}
+				err = f.Close()
+        if err != nil {
+          fmt.Println(err)
+        }
 }
