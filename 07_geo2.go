@@ -11,12 +11,12 @@
 package main
 
 import (
-//        "io/ioutil"
 				//"os"
+				//"buffer"
 				"fmt"
         "strconv"
 				"io/ioutil"
-        //"strings"
+        "strings"
         //"log"
         "net/http"
 				"github.com/PuerkitoBio/goquery"
@@ -63,11 +63,16 @@ func main() {
 
 					//parse json data to be passed to referrer
 					value := gjson.Get(jsonData, url)
-          //fmt.Println(value.Str)
+          fmt.Println(value.Str)
+
+					//substr to get the post data
+					postdata := "doc=" + strings.ReplaceAll(value.Str[strings.Index(value.Str,"044PXX44"):len(value.Str) - 6],"-",".")
+
+					fmt.Println(postdata)
 
 					//Request to get GeoLocation
 					client := &http.Client{}
-	        req, err := http.NewRequest("GET", "https://www.justdial.com/functions/maps.php", nil)
+	        req, err := http.NewRequest("POST", "https://www.justdial.com/functions/maps.php", strings.NewReader(postdata))
 	        if err != nil {
 	                fmt.Println(err)
 	        }
@@ -81,14 +86,14 @@ func main() {
 	                fmt.Println(err)
 	        }
 
-					Geojson, err := ioutil.ReadAll(resp.Body)
+					Geojsoni, err := ioutil.ReadAll(resp.Body)
 					if err != nil {
 						fmt.Println(err)
 					}
 
 	        defer resp.Body.Close()
 
-					fmt.Println(Geojson)
-
+					Geojsons := string(Geojsoni)
+					fmt.Printf(Geojsons)
 				}
 }
