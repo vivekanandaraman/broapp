@@ -95,3 +95,10 @@ substr(Url,-37,31) url1
 from Geo1) as g
 where c.url1 = g.url1
 ;
+
+//log jquery list of Selector in chrome console
+$('p.contact-info').each(function(){console.log(this);});
+// direct descendent nested element
+$('p.contact-info > span > a > span').each(function(){console.log(this);});
+// any nested element
+$('p.contact-info span.mobilesv').each(function(){console.log(this);});
