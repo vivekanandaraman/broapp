@@ -43,9 +43,14 @@ func main() {
 	//doc.Find("p.contact-info span.mobilesv").Each(func(i int, s *goquery.Selection) {
     //fmt.Println(s.Text())
 	//})
-	jsonData, err := doc.Find("span[class='mobilesv']").Html()
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(jsonData)
+	doc.Find("p.contact-info").Each(func(i int, s *goquery.Selection) {
+		//fmt.Println(s.Attr("onclick"))
+		fmt.Println(s.Find("span").Attr("class"))
+		//fmt.Println(s.Html())
+	})
+
+	// if err != nil {
+	// 	fmt.Println(err)
+	// }
+	// fmt.Println(jsonData)
 }
