@@ -8,7 +8,8 @@ import (
 				"fmt"
         //"strconv"
 				//"io/ioutil"
-        //"strings"
+        "strings"
+				"strconv"
         //"log"
         "net/http"
 				"github.com/PuerkitoBio/goquery"
@@ -41,7 +42,7 @@ func main() {
 	}
 
 	//create file if not already exists
-	f, err := os.OpenFile("Mobile.txt",
+	f, err := os.OpenFile("Mobile1.txt",
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		fmt.Println(err)
@@ -58,8 +59,9 @@ func main() {
 		//fmt.Println(s.Find("span.mobilesv").Attr("class"))
 		//fmt.Println(s.Html())
 			classname, _ := s.Attr("class")
+
 			//fmt.Println(urlid + classname)
-			fmt.Fprintln(f, urlid + classname)
+			fmt.Fprintln(f, urlid[strings.Index(urlid,"044PXX44"):len(urlid) - 3] + `,` + classname[strings.Index(classname,"-") + 1 :len(classname)] + `,` + strconv.Itoa(i+1) )
 			if err != nil {
 				fmt.Println(err)
 			}

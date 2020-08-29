@@ -77,6 +77,21 @@ git stash drop
 CREATE TABLE Sites AS SELECT (SiteTemplate1 || replace(Locality.Name,' ','-') || SiteTemplate2 || Page.PageNumber) AS text
 FROM SiteTemplate, Locality, Page;
 
+//sql for mobile
+select
+  UrlId,
+  MobileKey,
+  Value
+ from
+  Mobile1 m,
+  MobileKeyRef k
+Where
+  m.MobileKey = k.Key
+order by m.UrlId,m.MobileKeySeq
+;
+select count(*) from Mobile1 m, MobileKeyRef k Where m.MobileKey = k.Key ;
+
+//sql for address
 select
 BusinessName,
 Address,
