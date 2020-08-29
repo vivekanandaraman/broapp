@@ -153,3 +153,21 @@ curl 'https://www.justdial.com/webmain/autosuggest.php?cases=where&scity=Chennai
 
 dc fe ji yz hg ba ts ts ba ts vu vu rq ji acb rq ts
 +  (  9  1  )  -  4  4  -   4  4  3  5  9  0   5  4
+
+dc fe ji yz hg ba ji yz rq wx ts ji yz ji ts rq
++  (  9  1  )  -  9  1  5  2  4  9  1  9  4  5
+
+- ba
++ dc
+( fe
+) hg
+0 acb
+1 yz
+2 wx
+3 vu
+4 ts
+5 rq
+6 po
+7 nm
+8 lk
+9 ji

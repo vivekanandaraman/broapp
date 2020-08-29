@@ -3,7 +3,7 @@
 package main
 
 import (
-				//"os"
+				"os"
 				//"buffer"
 				"fmt"
         //"strconv"
@@ -39,6 +39,14 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	//create file if not already exists
+	f, err := os.OpenFile("Mobile.txt",
+		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		fmt.Println(err)
+	}
+
 	// parse the contact info from html
 	//doc.Find("p.contact-info span.mobilesv").Each(func(i int, s *goquery.Selection) {
     //fmt.Println(s.Text())
@@ -49,13 +57,17 @@ func main() {
 
 		//fmt.Println(s.Find("span.mobilesv").Attr("class"))
 		//fmt.Println(s.Html())
-		classname, _ := s.Attr("class")
-		fmt.Println(urlid + classname)
+			classname, _ := s.Attr("class")
+			//fmt.Println(urlid + classname)
+			fmt.Fprintln(f, urlid + classname)
+			if err != nil {
+				fmt.Println(err)
+			}
 	  })
 	})
 
-	// if err != nil {
-	// 	fmt.Println(err)
-	// }
-	// fmt.Println(jsonData)
+	err = f.Close()
+	if err != nil {
+		fmt.Println(err)
+	}
 }

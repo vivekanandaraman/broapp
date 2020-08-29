@@ -66,6 +66,13 @@ git commit -m 'comment'
 //commit changes to remote repo - github
 git push -u origin master
 
+//to drop changes in working dir
+git add . (adding everything)
+git stash
+git stash drop
+
+
+
 //sql to create site url - 16200
 CREATE TABLE Sites AS SELECT (SiteTemplate1 || replace(Locality.Name,' ','-') || SiteTemplate2 || Page.PageNumber) AS text
 FROM SiteTemplate, Locality, Page;
