@@ -80,15 +80,14 @@ FROM SiteTemplate, Locality, Page;
 //sql for mobile
 select
   UrlId,
-  MobileKey,
   Value
  from
-  Mobile1 m,
+  ( select UrlId, MobileKey, MobileKeySeq from Mobile1 order by UrlId, MobileKeySeq ) m,
   MobileKeyRef k
 Where
-  m.MobileKey = k.Key
-order by m.UrlId,m.MobileKeySeq
-;
+  m.MobileKey = k.Key;
+group by m.UrlId;
+
 select count(*) from Mobile1 m, MobileKeyRef k Where m.MobileKey = k.Key ;
 
 //sql for address
@@ -98,7 +97,11 @@ Address,
 Locality,
 Pincode,
 Country,
-Url
+g.lon,
+g.lat,
+m.ContactNo,
+"JustDial.com"
+c.url1
  from
 (
 select
@@ -113,10 +116,21 @@ from Customer1) as c,
 (
 select
 Url,
+lon,
+lat,
 substr(Url,-37,31) url1
-from Geo1) as g
+from GeoLocation1) as g,
+(
+select
+replace(UrlID,'.','-') url1,
+ContactNo
+from Mobile1
+) m
 where c.url1 = g.url1
+and c.url1 = m.url1
 ;
+
+CREATE TABLE Business ( BusinessName TEXT, Address TEXT, Locality TEXT,  Pincode TEXT, Country TEXT, Lat TEXT, Lon TEXT, ContactNo TEXT, Source TEXT, SourceId TEXT);
 
 //log jquery list of Selector in chrome console
 $('p.contact-info').each(function(){console.log(this);});

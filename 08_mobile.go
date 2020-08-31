@@ -9,7 +9,7 @@ import (
         //"strconv"
 				//"io/ioutil"
         "strings"
-				"strconv"
+				//"strconv"
         //"log"
         "net/http"
 				"github.com/PuerkitoBio/goquery"
@@ -52,20 +52,52 @@ func main() {
 	//doc.Find("p.contact-info span.mobilesv").Each(func(i int, s *goquery.Selection) {
     //fmt.Println(s.Text())
 	//})
+	//contact info ref
+	m := map[string]string{
+		"ba" : "-",
+		"dc" : "+",
+		"fe" : "(",
+		"hg" : ")",
+		"acb"  : "0",
+		"yz" : "1",
+		"wx" : "2",
+		"vu" : "3",
+		"ts" : "4",
+		"rq" : "5",
+		"po" : "6",
+		"nm" : "7",
+		"lk" : "8",
+		"ji" : "9",
+	}
+
+	// parse contact info
 	doc.Find("p.contact-info").Each(func(i int, s *goquery.Selection) {
 		urlid, _ := s.Attr("onclick")
+
+		//reset contactno
+		contactno := ""
+
 		s.Find("span.mobilesv").Each(func(i int, s *goquery.Selection) {
 
 		//fmt.Println(s.Find("span.mobilesv").Attr("class"))
 		//fmt.Println(s.Html())
 			classname, _ := s.Attr("class")
 
+			//build contactno
+			contactno = contactno + m[classname[strings.Index(classname,"-") + 1 :len(classname)]]
+
 			//fmt.Println(urlid + classname)
-			fmt.Fprintln(f, urlid[strings.Index(urlid,"044PXX44"):len(urlid) - 3] + `,` + classname[strings.Index(classname,"-") + 1 :len(classname)] + `,` + strconv.Itoa(i+1) )
-			if err != nil {
-				fmt.Println(err)
-			}
+
 	  })
+		//write urlid and contactno
+		fmt.Fprintln(f, urlid[strings.Index(urlid,"044PXX44"):len(urlid) - 3] + `,` + contactno)
+		if err != nil {
+			fmt.Println(err)
+		}
+		// fmt.Fprintln(f, urlid[strings.Index(urlid,"044PXX44"):len(urlid) - 3] + `,` + classname[strings.Index(classname,"-") + 1 :len(classname)] + `,` + strconv.Itoa(i+1) )
+		// if err != nil {
+		// 	fmt.Println(err)
+		// }
 	})
 
 	err = f.Close()
