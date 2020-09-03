@@ -12,55 +12,54 @@ import (
 				//"strconv"
         "log"
         "net/http"
+				"database/sql"
 				"github.com/PuerkitoBio/goquery"
+				"github.com/mattn/go-sqlite3"
         //"encoding/json"
         //"github.com/tidwall/gjson"
 //				"github.com/gocolly/colly"
 )
 
 func main () {
-	// If the file doesn't exist, create it or append to the file
-	file, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+
+	db, err := sql.Open("sqlite3", "C:\Users\264166\go\src\github.com\vivekanandaraman\broapp\listing.db")
+	checkErr(err)
+
+	// If the log file doesn't exist, create it or append to the file
+	logfile, err := os.OpenFile("logs.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
-			log.Fatal(err)
+			fmt.Println(err)
 	}
 
-	log.SetOutput(file)
+	log.SetOutput(logfile)
+
+	// error func defn
+	func checkErr(err error) {
+		if err != nil {
+				log.Fatal(err)
+		}
 
   client := &http.Client{}
 
   req, err := http.NewRequest("GET", "https://www.justdial.com/Chennai/Grocery-Stores-in-Selaiyur/nct-10237947/page-1", nil)
-  if err != nil {
-    log.Println(err)
-  }
+	checkErr(err)
 
   req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36")
 
   resp, err := client.Do(req)
-  if err != nil {
-		log.Println("Cannot access justdial.com")
-    log.Println(err)
-  }
+	checkErr(err)
 
   defer resp.Body.Close()
 
 	// Load the HTML document
 	doc, err := goquery.NewDocumentFromReader(resp.Body)
-	if err != nil {
-		log.Println(err)
-	}
+	checkErr(err)
 
 	//create file if not already exists
 	f, err := os.OpenFile("Mobile1.txt",
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
-	if err != nil {
-		log.Println(err)
-	}
+	checkErr(err)
 
-	// parse the contact info from html
-	//doc.Find("p.contact-info span.mobilesv").Each(func(i int, s *goquery.Selection) {
-    //fmt.Println(s.Text())
-	//})
 	//contact info ref
 	m := map[string]string{
 		"ba" : "-",
@@ -94,23 +93,20 @@ func main () {
 
 			//build contactno
 			contactno = contactno + m[classname[strings.Index(classname,"-") + 1 :len(classname)]]
-
-			//fmt.Println(urlid + classname)
-
 	  })
 		//write urlid and contactno
 		fmt.Fprintln(f, urlid[strings.Index(urlid,"044PXX44"):len(urlid) - 3] + `,` + contactno)
-		if err != nil {
-			log.Println(err)
-		}
-		// fmt.Fprintln(f, urlid[strings.Index(urlid,"044PXX44"):len(urlid) - 3] + `,` + classname[strings.Index(classname,"-") + 1 :len(classname)] + `,` + strconv.Itoa(i+1) )
-		// if err != nil {
-		// 	fmt.Println(err)
-		// }
-	})
 
+		// insert
+		stmt, err := db.Prepare("INSERT INTO userinfo(username, departname, created) values(?,?,?)")
+		checkErr(err)
+
+		res, err := stmt.Exec("astaxie", "研发部门", "2012-12-09")
+		checkErr(err)
+
+	})
 	err = f.Close()
-	if err != nil {
-		log.Println(err)
-	}
+	checkErr(err)
+	err = logfile.Close()
+	checkErr(err)
 }
