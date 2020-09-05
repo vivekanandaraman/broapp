@@ -14,15 +14,22 @@ import (
         "net/http"
 				"database/sql"
 				"github.com/PuerkitoBio/goquery"
-				"github.com/mattn/go-sqlite3"
+			 _"github.com/mattn/go-sqlite3"
         //"encoding/json"
         //"github.com/tidwall/gjson"
 //				"github.com/gocolly/colly"
 )
 
+// error func defn
+func checkErr(err error) {
+	if err != nil {
+			log.Fatal(err)
+	}
+}
+
 func main () {
 
-	db, err := sql.Open("sqlite3", "C:\Users\264166\go\src\github.com\vivekanandaraman\broapp\listing.db")
+	db, err := sql.Open("sqlite3", "/Users/vivekanandaraman/go/src/github.com/vivekanandaraman/broapp/listing.db")
 	checkErr(err)
 
 	// If the log file doesn't exist, create it or append to the file
@@ -30,14 +37,15 @@ func main () {
 	if err != nil {
 			fmt.Println(err)
 	}
-
 	log.SetOutput(logfile)
 
-	// error func defn
-	func checkErr(err error) {
-		if err != nil {
-				log.Fatal(err)
-		}
+	row, _ := db.Query("SELECT * FROM Sites")
+	for row.Next() { // Iterate and fetch the records from result cursor
+		var Url string
+		row.Scan(&Url)
+		fmt.Println(Url, " " , Contactno1)
+	}
+	row.Close()
 
   client := &http.Client{}
 
@@ -59,6 +67,9 @@ func main () {
 	f, err := os.OpenFile("Mobile1.txt",
 		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	checkErr(err)
+
+  // prepare sql for insert
+	stmt, _ := db.Prepare("INSERT INTO Mobile1(UrlID, ContactNo) VALUES (?,?)")
 
 	//contact info ref
 	m := map[string]string{
@@ -94,17 +105,16 @@ func main () {
 			//build contactno
 			contactno = contactno + m[classname[strings.Index(classname,"-") + 1 :len(classname)]]
 	  })
+
 		//write urlid and contactno
 		fmt.Fprintln(f, urlid[strings.Index(urlid,"044PXX44"):len(urlid) - 3] + `,` + contactno)
 
 		// insert
-		stmt, err := db.Prepare("INSERT INTO userinfo(username, departname, created) values(?,?,?)")
-		checkErr(err)
-
-		res, err := stmt.Exec("astaxie", "研发部门", "2012-12-09")
-		checkErr(err)
+		stmt.Exec(urlid[strings.Index(urlid,"044PXX44"):len(urlid) - 3],contactno)
 
 	})
+	err = db.Close()
+	checkErr(err)
 	err = f.Close()
 	checkErr(err)
 	err = logfile.Close()
